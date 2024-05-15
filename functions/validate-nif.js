@@ -1,14 +1,13 @@
 function isNif(nif) {
-    if(isNaN(nif)) {
-        return false; 
+  if (isNaN(nif)) {
+    return false;
+  } else {
+    if (nif.toString().length == 9) {
+      return true;
     } else {
-        if(nif.toString().length == 9) {
-            return true;
-        } else {
-            return false; 
-        }
+      throw new Error("invalid_length");
     }
+  }
 }
 
 module.exports = isNif;
-    
